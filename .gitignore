@@ -1,0 +1,5 @@
+# Node modules (don't push huge dependency folders)
+node_modules/
+
+# Environment variables (keep secrets out of GitHub)
+.env

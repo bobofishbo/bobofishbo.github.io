@@ -65,6 +65,8 @@
          
       </header>
 
+ 
+
       <!--==================== MAIN ====================-->
       <main class="main">
          <!--==================== HOME ====================-->
@@ -124,55 +126,37 @@
 
          <!--==================== ABOUT ====================-->
          <section class="about section" id="about">
-            <div class="about__container container grid">
-               <h2 class="section__title-1">
-                  <span>About Me</span>
-               </h2>
-
-               <div class="about__perfil">
-                  <div class="about__image">
-                     <img src="assets/img/about-perfil.jpg" alt="image" class="about__img">
-                     <div class="about__shadow"></div>
-                     <div class="geometric-box"></div>
-                     
-                     <img src="assets/img/random-lines.svg" alt="" class="about__line">
-                     <div class="about__box"></div>
-                  </div>
-
+            <div class="about__container container grid chatbot-layout">
+              <!-- Left: Chat output -->
+              <div class="about__perfil">
+               <div class="about__img-wrapper">
+                 <img src="assets/img/bbfish.png" alt="picture of myself" class="about__img">
+                 
+                 <!-- Speech bubble chatbot -->
+                 <div id="chatbot-container" class="chatbot-bubble">
+                   <div id="chat-messages"></div>
+                 </div>
                </div>
-
-               <div class="about__info">
-                  <p class="about__description">
-                     I was born in <b>Tianjin, China</b>, and I have studied in <b>Singapore</b>, <b>Beijing</b>, and <b>USA</b>. <br><br>
-                     I love <b>charity</b>, my projects focused on people and environment of Qinghai-Tibet. 
-                     <br>I enjoy <b>sports</b>, and I support Premier League soccer team, Arsenal.
-                     <br><br>My passion for the data behind sports and my vision to apply 
-                     technology in my charity works drive me to pursue a career in <b>data science</b> and <b>computer science</b>.
-                  </p>
-
-                  <ul class="about__list">
-                     <li class="about__item">
-                        <b>My Skills Are:</b> Python, React.JS,
-                        Java, Python Libraries, R, Tableau, Git & GitHub, LaTeX
-                     </li>
-                  </ul>
-
-                  <div class="about__buttons">
-                     <a href="#contact" class="button">
-                        <i class="ri-send-plane-line"></i> Contact Me
-                     </a>
-
-                     <a href="https://www.linkedin.com/in/bo-xie-918761291/" class="button__ghost">
-                        <i class="ri-linkedin-box-line"></i>
-                     </a>
-                  </div>
-               </div>
-        
-
-
+             </div>
+             
+          
+              <!-- Right: title and input -->
+              <div class="chat-right-panel">
+                <h2 class="section__title-1">
+                  <span>Ask Me Anything</span>
+                </h2>
+                <div id="chat-input">
+                  <input type="text" id="user-input" placeholder="Type your message..." />
+                  <button id="send-button">Send</button>
+                </div>
+              </div>
             </div>
-            
-         </section>
+          </section>
+          
+         
+         <!-- Add chatbot logic -->
+         <script src="chatbot/chatbot.js"></script>
+ 
 
          <!--==================== Life So Far ====================-->
          <section class="life section">
